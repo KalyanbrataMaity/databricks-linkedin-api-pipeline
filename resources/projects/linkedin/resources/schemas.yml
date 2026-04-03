@@ -1,0 +1,37 @@
+resources:
+  schemas:
+    bronze_linkedin:
+      name: bronze_linkedin
+      catalog_name: ${var.catalog}
+      comment: "Raw ingested data from LinkedIn"
+      grants: 
+        - principal: <your-user@email.com>
+          privileges:
+            - ALL_PRIVILEGES
+        - principal: ${var.service_principal_app_id}
+          privileges:
+            - ALL_PRIVILGES
+
+    silver_linkedin:
+      name: silver_linkedin
+      catalog_name: ${var.catalog}
+      comment: "Cleaned and deduplicated LinkedIn data"
+      grants: 
+        - principal: <your-user@email.com>
+          privileges:
+            - ALL_PRIVILEGES
+        - principal: ${var.service_principal_app_id}
+          privileges:
+            - ALL_PRIVILGES
+
+    gold_linkedin:
+      name: gold_linkedin
+      catalog_name: ${var.catalog}
+      comment: "Aggregated LinkedIn metrics for reporting"
+      grants: 
+        - principal: <your-user@email.com>
+          privileges:
+            - ALL_PRIVILEGES
+        - principal: ${var.service_principal_app_id}
+          privileges:
+            - ALL_PRIVILGES

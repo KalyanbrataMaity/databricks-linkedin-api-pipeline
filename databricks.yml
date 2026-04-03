@@ -4,7 +4,7 @@ bundle:
   name: my-lakehouse
 
 include:
-  - resources/*.yml
+  #- resources/*.yml
   - projects/*/resources/*.yml
 
 variables:
@@ -18,7 +18,8 @@ targets:
   dev-user:
     mode: development
     workspace: 
-      host: https://<your-workspace-url>.azuredatabricks.net
+      #host: https://<your-workspace-url>.azuredatabricks.net
+      host: https://dbc-ccc204b7-fea5.cloud.databricks.com
     variables:
       catalog: <your-dev-catalog>
       service_pricipal_app_id: <your-sp-app-id>
